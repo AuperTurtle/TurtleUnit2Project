@@ -4,6 +4,10 @@ public class LinearEquation {
     private int y1;
     private int x2;
     private int y2;
+    private double roundResult;
+    private double distance;
+    private double slope;
+    private double yIntercept;
 
 
     /* Creates a LinearEquation object */
@@ -18,21 +22,24 @@ public class LinearEquation {
     /* Calculates and returns distance between (x1, y1) and (x2, y2), rounded to
        the nearest hundredth */
     public double distance() {
-        return 0;
+        distance = roundedToHundredth(Math.sqrt((Math.pow((x2 - x1), 2) + (Math.pow((y2 - y1), 2)))));
+        return distance;
     }
 
 
     /* Calculates and returns the y-intercept of the line between (x1, y1) and
        (x2, y2), rounded to the nearest hundredth */
     public double yIntercept() {
-        return 0;
+        yIntercept = roundedToHundredth(y1 - (slope() * x1));
+        return yIntercept;
     }
 
 
     /* Calculates and returns the slope of the line between (x1, y1) and
        (x2, y2), rounded to the nearest hundredth */
     public double slope() {
-        return 0;
+        slope = roundedToHundredth(((double) y2 - y1) / ((double) x2 - x1));
+        return slope;
     }
 
 
@@ -78,7 +85,8 @@ public class LinearEquation {
         HINT:  the Math.round method can help with this!
      */
     public double roundedToHundredth(double toRound) {
-        return 0;
+        roundResult = ((double) Math.round(toRound * 100)) / 100;
+        return roundResult;
     }
 
 

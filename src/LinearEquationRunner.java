@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import static java.lang.Integer.parseInt;
+
 public class LinearEquationRunner {
     public static void main(String[] args ) {
         Scanner scan = new Scanner(System.in);
@@ -10,6 +12,16 @@ public class LinearEquationRunner {
         String secondCoord = scan.nextLine();
 
 
-        //parse int in here
+        int firstX = Integer.parseInt(firstCoord.substring(1, firstCoord.indexOf(",")));
+        int firstY = Integer.parseInt(firstCoord.substring(firstCoord.indexOf(",") + 2, firstCoord.length()-1));
+        int secondX = Integer.parseInt(secondCoord.substring(1, secondCoord.indexOf(",")));
+        int secondY = Integer.parseInt(secondCoord.substring(secondCoord.indexOf(",") + 2, secondCoord.length()-1));
+
+        LinearEquation equation = new LinearEquation(firstX, firstY, secondX, secondY);
+
+        System.out.println(equation.distance());
+        System.out.println(equation.slope());
+        System.out.println(equation.yIntercept());
+
     }
 }
