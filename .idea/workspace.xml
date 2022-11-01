@@ -93,7 +93,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/LinearEquation.java</url>
-          <line>38</line>
+          <line>42</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
